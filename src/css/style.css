@@ -1,0 +1,146 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.main-div{
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+}
+.side-div{
+    width: 15%;
+}
+.note-div{
+    width: 85%;
+    display: flex;
+    padding: 30px 20px;
+    flex-direction: column;
+}
+
+.main_note{
+    width: 100%;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+}
+.main_note form{
+    width: 600px;
+    position: relative;
+    right: 60px;
+    height: 150px; 
+    border-radius: 10px;
+}
+
+.main_note form input,
+.main_note form textarea
+{
+    width:600px;
+    border: none;
+    outline: hidden;
+    padding: 10px 0px 10px 20px;    
+    overflow: hidden;
+    height: 45px;
+    border-radius: 10px;
+    font-size: 18px;
+}
+.main_note form textarea{
+    resize: none;
+    border-radius: 10px;
+    box-shadow: 5px 5px 20px -5px rgb(0,0,0,0.3);
+}
+textarea::selection{
+    box-shadow: none;
+}
+
+input:focus,
+textarea:focus
+{
+    outline: none;
+}
+
+
+/* Note */
+.notes{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-top: 20px;
+}
+.note{
+    border: 1px solid rgb(224, 224, 224);
+    width: 235px;
+    padding: 10px;
+    border-radius: 20px;
+    margin: 20px 10px;
+    word-wrap: break-word;
+}
+
+.note h1{
+    font-size: 22px;
+    margin-right: 20px;
+    word-wrap: break-word;
+    margin-bottom: 5px;
+}
+.note p{
+    font-size: 20px;
+    margin-right: 15px;
+    word-wrap: break-word;
+    margin-bottom: 5px;
+}
+
+.note .btn,
+#btn1
+{
+    border-radius: 50%;
+    color: rgb(204, 159, 10);
+    float: right;
+    box-shadow: 5px 5px 15px -5px rgba(0,0,0,0.3);
+}
+#btn1{
+    margin-right: 10px;
+}
+.note .btn:hover,
+#btn1:hover
+{
+    background-color: rgb(248, 243, 179);
+    color: grey;
+}
+
+@media (max-width: 768px){
+    .side-div{
+        display: none;
+    }
+    .main_note{
+        height: 100px;
+        margin-left: 60px;
+    }
+    .main_note form{
+        width: 300px;
+        height: 100px; 
+    }
+    .main_note form input,
+    .main_note form textarea
+    {
+        width:300px;
+    }
+    .note-div{
+        width: 100vw;
+    }
+    .notes{
+        display: flex;
+        justify-content: space-evenly;
+        margin-top: 15px;
+        width: 100%;
+    }
+    .note{
+        width: 135px;
+        margin: 10px;
+    }
+    #btn1{
+        position: relative;
+        bottom: 45px;
+    }
+    }
